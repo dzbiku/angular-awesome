@@ -13,6 +13,7 @@ import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 import { ProductGuardService } from './products/product-guard.service';
 import { MapsComponent } from './maps/maps.component'; //dla routingu
+import { AgmCoreModule } from '@agm/core'; //dla google maps
 
 @NgModule({
   declarations: [ //internal- wewen
@@ -37,6 +38,9 @@ import { MapsComponent } from './maps/maps.component'; //dla routingu
       {path:'', redirectTo: 'welcome', pathMatch: 'full'},
       {path:'**', redirectTo: 'welcome', pathMatch: 'full'}
     ]), //dla routingu
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAs06Yw1kZrVY71YFQBdhssa4TK1dHTguo'
+    }) //dla google maps
   ],
   providers: [ProductGuardService], //automatycznie dodał sie serwis odpowiedzialny za ochrone routingu
   bootstrap: [AppComponent]

@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapsComponent implements OnInit {
 
+  title: string = 'Google Maps project for cars';
+  lat: number = 51.10000;
+  lng: number = 17.0300;
   constructor() { }
 
   ngOnInit() {
