@@ -13,7 +13,7 @@ import { ProductService } from './products/product.service'; ///rejestracja serw
                   <li><a [routerLink]="['/welcome']">Home</a></li> 
                   <li><a [routerLink]="['/products']">Product List</a></li>
                   <li><a [routerLink]="['/maps']">Google Maps</a></li>
-                  <li><a [routerLink]="['/products']">Video</a></li>
+                  <li><a [routerLink]="['/media']">Video</a></li>
                   <li><a [routerLink]="['/products']">Data from car</a></li>
               </ul>
           </div>

@@ -13,7 +13,8 @@ import { WelcomeComponent } from './home/welcome.component';
 import { RouterModule } from '@angular/router';
 import { ProductGuardService } from './products/product-guard.service';
 import { MapsComponent } from './maps/maps.component'; //dla routingu
-import { AgmCoreModule } from '@agm/core'; //dla google maps
+import { AgmCoreModule } from '@agm/core';
+import { MediaComponent } from './media/media.component'; //dla google maps
 
 @NgModule({
   declarations: [ //internal- wewen
@@ -23,7 +24,7 @@ import { AgmCoreModule } from '@agm/core'; //dla google maps
     ConvertToSpacesPipe,
     StarComponent,
     ProductDetailComponent,   
-    WelcomeComponent, MapsComponent
+    WelcomeComponent, MapsComponent, MediaComponent
   ],
   imports: [ //tutaj umieszczamy zewnetrzne bibiloteki
     BrowserModule, //external 
@@ -32,6 +33,7 @@ import { AgmCoreModule } from '@agm/core'; //dla google maps
     RouterModule.forRoot([
       {path:'products', component: ProductListComponent},
       {path:'maps', component: MapsComponent},
+      {path:'media', component: MediaComponent},
       {path:'products/:id',canActivate:[ProductGuardService],
        component: ProductDetailComponent},
       {path:'welcome', component: WelcomeComponent},
