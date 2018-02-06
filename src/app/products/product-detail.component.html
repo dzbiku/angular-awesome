@@ -1,0 +1,10 @@
+<div class='pasnel panel-primary' *ngIf='product'> <!--sprawdz czy element nie jest nullem-->
+  <div class='panel-heading'>
+    {{pageTitle + ': ' + product.productName}} <!-- product?.productNameznak zapytania aby uniknac UNDEFINIED, poniewaz HTTP jest asynchroniczne i moze wystapic blad-->
+  </div>
+  <div class='panel-footer'>
+    <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+      <i class='glyphicon glyphicon-chevron-left'></i> Back
+    </a>
+  </div>
+</div>
